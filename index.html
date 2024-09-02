@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind css first setup</title>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="navbar flex justify-between items-center p-4 ">
+            <div class="flex justify-center items-center md:order-2">
+                <!-- the three lines appear on mobile screen, top left corner  -->
+                <div class="hamburger cursor-pointer inline-block md:hidden p-4">
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                    <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                </div>
+                <div class="search md:hidden w-4 ml-4 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <!-- the microsoft logo main top left  -->
+            <div class="logo text-center md:order-1 flex">
+                <div class=" flex justify-start "><a href="/"><img class="w-[50%]" src="images/logo.png" alt=""></a>
+                </div>
+                <!-- the features on the top appear on big screen  -->
+                <div
+                    class="features md:flex md:items-center absolute inset-0 w-fit bg-gray-300 md:w-auto md:bg-white -translate-x-96 md:translate-x-0 md:static space-x-8 mx-4">
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Microsoft 365</div>
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Products</div>
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Xbox</div>
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Copilot</div>
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Support</div>
+                </div>
+            </div>
+            <!-- the three icons on the top right corner (search,account, cart) -->
+            <div class="cart text-center md:order-3 flex space-x-3 mr-4">
+                <div class="search hidden md:block w-4 mr-4 cursor-pointer"><i
+                        class="  fa-solid fa-magnifying-glass"></i></div>
+                <div><i class="mr-2 fa-solid fa-cart-shopping cursor-pointer"></i></div> <i
+                    class="mt-1 ml-2 mr-4 fa-regular fa-user cursor-pointer"></i>
+            </div>
+        </div>
+        <!-- the main text of the laptop on the left -->
+        <div class="slider flex flex-col-reverse md:flex-row bg-[#e6e6e6] mx-2">
+            <div class="left flex flex-col justify-center items-center md:items-baseline py-12">
+                <h1 class="text-3xl font-medium md:text-4xl my-2 mx-5">Meet Surface Pro</h1>
+                <p class="w-3/4 mx-5 text-center md:text-left mt-2">This laptop's unrivalled flexibility and AI features
+                    like
+                    Live Captions and Cocreator, enable you to do more than you ever imagined.</p>
+                <button class="text-white bg-black p-4 py-2 font-bold my-6">Shop Now </button>
+            </div>
+            <!-- the laptop image on the right side (main image) -->
+            <div class="right">
+                <img class="w-[60rem] md:w-[60rem]" src="images/laptopimg.png" alt="">
+            </div>
+        </div>
+        <!-- the 4 promo icons  -->
+        <div class="promo space-y-6 flex-col flex lg:flex-row justify-center">
+            <div class="items flex items-center mx-4 space-x-2">
+                <img class="w-16 mt-4" src="images/micrologo.svg" alt="">
+                <span class="font-medium mt-6">Choose your Microsoft 365</span>
+            </div>
+            <div class="items flex items-center mx-4 space-x-2">
+                <img class="w-16" src="images/xboxlogo.svg" alt="">
+                <span class="font-medium ">Buy Xbox Games</span>
+            </div>
+            <div class="items flex items-center mx-4 space-x-2">
+                <img class="w-16" src="images/micrologo.svg" alt="">
+                <span class="font-medium ">Get Windows 11</span>
+            </div>
+            <div class="items flex items-center mx-4 space-x-2">
+                <img class="w-16" src="images/surflogo.svg" alt="">
+                <span class="font-medium ">Buy Surface Devices</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
