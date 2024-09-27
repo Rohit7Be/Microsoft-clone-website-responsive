@@ -1,0 +1,46 @@
+nav li:first-child {
+    margin-left: auto;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #a3a1a1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 150px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.408);
+    transition: 150ms;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}

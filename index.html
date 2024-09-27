@@ -9,24 +9,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
     <div class="container mx-auto">
         <div class="navbar flex justify-between items-center p-4 ">
+            <nav class="sidebar">
+                <ul>
+                    <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="#">Microsoft 365</a></li>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Copilot</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Xbox</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </nav>
+
+
             <div class="flex justify-center items-center md:order-2">
                 <!-- the three lines appear on mobile screen, top left corner  -->
-                <div class="hamburger cursor-pointer inline-block md:hidden p-4">
+                <div onclick="showSidebar()" class="hamburger cursor-pointer inline-block md:hidden p-4">
                     <div class="line h-0.5 w-6 my-1 bg-black"></div>
                     <div class="line h-0.5 w-6 my-1 bg-black"></div>
                     <div class="line h-0.5 w-6 my-1 bg-black"></div>
                 </div>
-                <div class="search md:hidden w-4 ml-4 cursor-pointer"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="search md:hidden w-4 ml-4 cursor-pointer mr-14"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
             <!-- the microsoft logo main top left  -->
-            <div class="logo text-center md:order-1 flex">
-                <div class=" flex justify-start "><a href="/"><img class="w-[50%]" src="images/logo.png" alt=""></a>
+            <div class="logo text-center md:order-1 flex ">
+                <div class=" flex justify-start"><a href="/"><img class="w-[70%]" src="images/logo.png" alt=""></a>
                 </div>
                 <!-- the features on the top appear on big screen  -->
                 <div
@@ -36,6 +52,7 @@
                     <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Xbox</div>
                     <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Copilot</div>
                     <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Support</div>
+                    <div class="fitems hover:underline hover:underline-offset-8 cursor-pointer">Other</div>
                 </div>
             </div>
             <!-- the three icons on the top right corner (search,account, cart) -->
@@ -81,6 +98,19 @@
 
         </div>
     </div>
+
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+
+        }
+    </script>
 </body>
 
 </html>
